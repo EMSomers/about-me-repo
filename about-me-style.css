@@ -1,0 +1,548 @@
+/* Things to Edit
+
+-cat gallery needs to be centered
+
+figure out how to customize the form more - radio buttion + drop down selections
+
+
+*/
+
+
+
+
+/* Global Styles */
+
+:root {
+
+    /* root colours */
+    --dark-blue: #0c6594;
+    --light-blue: #57acd8;
+    --orange: #e48b2f;
+    --cream: #fff6e6;
+    --black: #000000;
+
+
+    /* root fonts */
+    --headings: "Permanent Marker", cursive;
+    --body: "Amatic SC", sans-serif;
+
+    /* Font Sizing */
+    --xsmall-font: 1rem;
+    --small-font: 1.25rem;
+    --medium-font: 1.5rem;
+    --large-font: 1.75rem;
+    --xlarge-font: 2rem;
+
+    /* Root Spacing + borders */
+
+    --border-raidus: 50px;
+    --padding: 2%;
+    --margin: 5%;
+    --large-marg: 10%
+}
+
+html {
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+}
+
+body {
+    background-color: var(--cream);
+    width: 95%;
+}
+
+nav {
+    background-color: var(--dark-blue);
+    font-family: var(--headings);
+    width: 80%;
+    /* height: 5%; */
+    margin: 0 auto;
+    padding: var(--padding);
+
+}
+
+/* Want this section of the nav to be an end-start */
+.right-nav {
+    margin-left: auto;
+    padding-right: var(--padding);
+}
+
+ul {
+    display: flex;
+    align-content: center;
+    gap: var(--large-marg);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff6e6;
+    font-size: var(--medium-font);
+}
+
+a:hover {
+    color: var(--black);
+    font-size: var(--large-font);
+    transition: .5s linear;
+}
+
+
+h1 {
+    font-size: var(--medium-font);
+}
+
+h2,
+h3 {
+    font-family: var(--headings);
+    font-size: var(--xlarge-font);
+}
+
+p {
+    font-family: var(--body);
+    font-size: var(--medium-font);
+}
+
+
+
+.footer {
+    background-color: var(--dark-blue);
+    font-family: var(--headings);
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 25%);
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: var(--margin);
+    padding-bottom: var(--padding);
+}
+
+#footer-1 {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+#footer-2 {
+    grid-column: 3/5;
+    grid-row: 1;
+}
+
+
+footer h2 {
+    font-size: var(--small-font);
+}
+
+footer a {
+    font-size: var(--small-font);
+    font-family: var(--body);
+}
+
+
+/* animation style */
+
+
+
+.animation {
+    font-family: "Permanent Marker", cursive;
+    width: 12%;
+    height: 10%;
+    padding: var(--padding);
+    margin: var(--margin);
+    text-align: center;
+
+
+
+    animation-name: animation;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    0% {
+        border-radius: 50%, 0%, 0%, 0%;
+        transform: rotate(0deg);
+        background-color: var(--light-blue);
+    }
+
+
+
+    50% {
+        border-radius: 50%, 50%, 50%, 0%;
+        transform: rotate(180deg);
+    }
+
+
+    100% {
+        border-radius: 50%;
+        transform: rotate(360deg);
+        background-color: var(--dark-blue);
+    }
+
+}
+
+/* Apply reduced motion query for increased accessability  */
+@media (prefers-reduced-motion) {
+    .animation {
+        animation-duration: 0s;
+        background-color: var(--dark-blue);
+        color: var(--cream);
+        border-radius: 50%;
+        border: 3px solid var(--orange);
+    }
+}
+
+
+
+/* Specific Page Styles */
+
+/* Main Page */
+#main-cat-image {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#main-cat-image h2 {
+    font-family: var(--headings);
+    padding-left: var(--margin);
+
+}
+
+
+#main-camp-image {
+    background-color: #05101c;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-block: 10%;
+
+}
+
+#main-camp-image h2 {
+    font-family: var(--headings);
+    color: var(--cream);
+    padding-right: var(--margin);
+}
+
+#main-camp-image img {
+    width: 80%;
+}
+
+
+
+/* Cat Gallery Style  */
+
+.cat-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--large-marg);
+}
+
+/* would sizing the images be better with a % so it scales better but having px set makes it the size I want it at  */
+.cat-gallery img {
+    width: 275px;
+    max-height: 173px;
+    object-fit: cover;
+}
+
+/* Cat Article Style */
+
+.cat-paragraph {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #d67e36;
+    margin-bottom: var(--large-marg);
+    align-items: center;
+}
+
+.cat-paragraph h2 {
+    text-align: center;
+}
+
+.cat-paragraph img {
+    max-width: 100%;
+    padding-right: var(--margin);
+}
+
+.cat-paragraph p {
+    padding: var(--margin);
+}
+
+
+
+/* Camp Gallery  */
+
+.camp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    align-items: center;
+    justify-items: center;
+
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.camp-grid img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Camp Article*/
+
+.camp-paragraph {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: var(--light-blue);
+    margin-block: var(--large-marg);
+
+    width: 80%;
+}
+
+.camp-paragraph img {
+    max-width: 125%;
+}
+
+.camp-paragraph p {
+    color: var(--black);
+    width: 80%;
+    padding-inline: var(--large-marg);
+}
+
+.camp-paragraph div {
+    padding: var(--padding);
+}
+
+
+/* Cat Form */
+
+
+.cat-form-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat-form {
+    width: 50%;
+    margin: 0 auto;
+
+    margin-block: var(--margin);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    font-family: var(--headings);
+}
+
+input[type=text] {
+    padding: var(--padding);
+    margin: var(--padding);
+    width: 80%;
+    border-radius: var(--border-raidus);
+    border: 3px solid var(--orange);
+}
+
+
+
+button {
+    border-radius: var(--border-raidus);
+    width: 50%;
+    padding: var(--padding);
+
+    background-color: var(--orange);
+    margin: 0 auto;
+    margin-top: var(--large-marg);
+}
+
+
+
+
+
+/*Display Size Changes */
+
+@media (max-width: 768px) {
+
+    :root {
+        /* Font Sizing */
+        --xsmall-font: .75rem;
+        --small-font: 1rem;
+        --medium-font: 1.25rem;
+        --large-font: 1.5rem;
+        --xlarge-font: 1.75rem;
+
+    }
+
+    /* Cat Page resized */
+
+    .cat-gallery img {
+        width: 200px;
+        max-height: 125px;
+    }
+
+
+    /* Camp Page resized */
+
+    .camp-paragraph img {
+        width: 100%;
+    }
+
+    .camp-paragraph {
+        display: block;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+/* 640px screen width */
+@media (max-width:640px) {
+
+    :root {
+        --large-font: 1.25rem;
+        --xlarge-font: 1.5rem;
+    }
+
+    a {
+        font-size: var(--small-font);
+    }
+
+    .animation {
+        font-family: var(--body);
+    }
+
+    .footer a {
+        font-size: var(--medium-font);
+    }
+
+
+
+    /* cat Page resized*/
+
+    .cat-paragraph {
+        flex-wrap: wrap;
+    }
+
+    /* Camp Gallery resized */
+
+    .camp-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+
+}
+
+
+/* 480px screen width */
+@media (max-width: 480px) {
+
+    /* global styles */
+
+    :root {
+        --large-font: 1rem;
+        --xlarge-font: 1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+
+    .footer {
+        display: block;
+    }
+
+
+    /* Cat Page style */
+
+    .cat-gallery {
+        display: block;
+        align-items: center;
+    }
+
+    .cat-gallery img {
+        width: 80%;
+        max-height: fit-content;
+    }
+
+    .cat-form-article {
+        text-align: center;
+    }
+
+    /* Camp Page Style */
+
+
+    .camp-grid {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
+
+
+
+
+/* Dark Mode Media Query */
+
+@media (prefers-color-scheme:dark) {
+
+    /*  global style adjustments */
+    /* root colours */
+    :root {
+        --dark-blue: #0c6594;
+        --light-blue: #57acd8;
+        --orange: #e48b2f;
+        --cream: #000000;
+        --black: #fff6e6;
+    }
+
+
+    a {
+        color: var(--cream);
+    }
+
+
+    /* cat form page style */
+
+    .cat-form-article {
+        color: var(--black);
+    }
+
+    .cat-form {
+        color: var(--black);
+    }
+}

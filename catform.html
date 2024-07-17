@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="about-me-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+
+    <title>Cat Form</title>
+</head>
+
+<body>
+    <div class="cat-form-page">
+        <header>
+            <nav>
+                <ul>
+                    <li> <a href="./about-me-exervcise.html"> Home</a></li>
+                    <li> <a href="./cats.html"> Kitties</a></li>
+                    <li> <a href="./camping.html"> Camping</a></li>
+
+                    <li class="right-nav"><a href="./catform.html">Tell Us About Your Cat</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Animated Box -->
+            <section class="animation">
+                <h1>Your Cats!</h1>
+            </section>
+            <article class="cat-form-article">
+                <h2>Tell Us About Your Cat</h2>
+                <p>We want to know more about your cat so we can understand cats and their lifestyle more!</p>
+            </article>
+            <section>
+                <div class="cat-form" aria-label="cat-survey">
+                    <form action="#" method="post" name="cat-info-form"></form>
+                    <!-- Pets Name -->
+                    <label for="pets-name" aria-label="pets-name">Pets Name</label>
+                    <input type="text" name="pets-name" placeholder="Mr.Floofy Pants" aria-label="pets-name">
+                    <!-- Pets Age -->
+                    <label for="pets-age">Age</label>
+                    <input type="text" name="pets-age" placeholder="5" required aria-label="pets-age">
+                    <!-- Indoor / Outdoor Radial  on one line?-->
+                    <div id="indoor-outdoor">
+                        <label for="inside-cat">Indoor Cat</label>
+                        <input type="radio" name="inside" aria-label="indoor-cat-button">
+                        <label for="outside-cat">Outdoor Cat</label>
+                        <input type="radio" name="outside" aria-label="outside-cat-button">
+                    </div>
+                    <!-- Food Type -->
+                    <div id="indoor-outdoor">
+                        <label for="dry-food">Dry Food</label>
+                        <input type="radio" name="dry-food" aria-label="dry-food-button">
+                        <label for="wet-food">Wet Food</label>
+                        <input type="radio" name="wet-food" aria-label="wet-food-button">
+                    </div>
+                    <!-- Multiple Options to Check - fur Colour -->
+                    <fieldset>
+                        <legend>Your Cats Fur Colour</legend>
+
+                        <div>
+                            <input type="checkbox" id="black" name="black" checked aria-label="blac-cat"
+                                class="colour" />
+                            <label for="scales">Black</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="white" name="white" aria-label="white-cat" class="colour" />
+                            <label for="horns">White</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="dark-grey" name="dark-grey" aria-label="dark-grey-cat"
+                                class="colour" />
+                            <label for="horns">Dark Grey</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="light-grey" name="light-grey" aria-label="light-grey-cat"
+                                class="colour" />
+                            <label for="horns">Light Grey</label>
+                        </div>
+
+
+                        <div>
+                            <input type="checkbox" id="dark-orange" name="dark-orange" aria-label="dark-orange"
+                                class="colour" />
+                            <label for="horns">Dark Orange</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="light-orange" name="light-orange" aria-label="light-orange"
+                                class="colour" />
+                            <label for="horns">Light Orange</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="tortoise" name="tortoise" aria-label="tortoise" class="colour" />
+                            <label for="horns">Tortoise</label>
+                        </div>
+                    </fieldset>
+                    <!-- Pets Name -->
+                    <label for="toy">Favourite Toy</label>
+                    <input type="text" name="toy" placeholder="Balls of Yarn" aria-label="favourite-toy">
+
+                    <label for="active-level">How Active is Your Cat?</label>
+                    <select name="active-level">
+                        <option value="highly-active"> Highly Active</option>
+                        <option value="moderate-active"> Moderately Active</option>
+                        <option selected value="slightly-active"> Slightly Active</option>
+                        <option value="occasionally-active"> Occassionaly Active</option>
+                        <option value="not-active"> Not Active</option>
+                    </select>
+
+                    <!-- Drop Down Menu - Are the Active?-  -->
+
+
+                    <!-- Submit Button -->
+                    <button>Submit</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="footer">
+                <div id="footer-1">
+                    <h2>Learn More About Cats</h2>
+                </div>
+                <div id="footer-3">
+                    <a href="https://www.tuftandpaw.com/blogs/cat-education-center"
+                        aria-label="Cat Education through Tuft and Paw">Tuft and Paw</a>
+
+                </div>
+                <div id="footer-4">
+                    <a href="https://www.alleycat.org/community-cat-care/educate-your-neighbors/"
+                        aria-label="Cat Education through Alley Cat"> Alley Cat
+                        Allies</a>
+
+                </div>
+                <div id="footer-2">
+                    <h2>Learn More About Camping</h2>
+
+                </div>
+                <div id="footer-5">
+                    <a href="https://parks.canada.ca/serapprocher-connect/ltc-dlc"
+                        aria-label="Parks Canada guide to camping"> Parks
+                        Canada</a>
+
+                </div>
+                <div id="footer-6">
+                    <a href="https://www.mountainwarehouse.com/community/expert-advice/camping-guide-for-beginners"
+                        aria-label="Monutain Equipment Warehouse guide to camping">
+                        MEC</a>
+
+                </div>
+
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>

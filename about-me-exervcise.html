@@ -1,0 +1,107 @@
+<!-- Goals for this exercise
+Both pages should have some type of gallery of images on them
+Both pages should have different flexbox formatting.
+Both pages should use media queries
+Both pages should have some type of pseudo class with a smooth animation
+
+My Goals
+- Make a wide image where the background matches a colour in it, creating a seamless look
+
+- Learn about + Create an Animation
+
+- Media Queries for each page! 
+
+- split nav bar
+
+- Additional Page with a FORM
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="about-me-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+
+    <title>About Me!</title>
+</head>
+
+<body>
+    <div class="about-me">
+        <header>
+            <nav>
+                <ul>
+                    <li> <a href="./about-me-exervcise.html"> Home</a></li>
+                    <li> <a href="./cats.html"> Kitties</a></li>
+                    <li> <a href="./camping.html"> Camping</a></li>
+                    <li class="right-nav"><a href="./catform.html">Tell Us About Your Cat</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Name in an Animated Box -->
+            <section class="animation">
+                <h1>Things I Like</h1>
+            </section>
+            <!-- Gallery -->
+
+            <div class="flex-gallery">
+                <!-- Cat Background Colour - #f8f8f9 -->
+                <section id="main-cat-image">
+                    <h2>Check out some Cool Cats</h2>
+                    <a href="./cats.html"><img src="./images/cat7.jpg" alt="link to our page on cats"></a>
+                </section>
+                <!-- Camping Background Colour - Gradient Top #5b80b3 Bottom #36445c -->
+                <section id="main-camp-image">
+                    <a href="./camping.html"><img src="./images/camping9.jpg" alt="link to our page on camping"></a>
+                    <h2>Check out some Sick Campsites</h2>
+
+                </section>
+            </div>
+        </main>
+        <footer>
+            <section class="footer">
+                <div id="footer-1">
+                    <h2>Learn More About Cats</h2>
+                </div>
+                <div id="footer-3">
+                    <a href="https://www.tuftandpaw.com/blogs/cat-education-center"
+                        aria-label="Cat Education through Tuft and Paw">Tuft and Paw</a>
+
+                </div>
+                <div id="footer-4">
+                    <a href="https://www.alleycat.org/community-cat-care/educate-your-neighbors/"
+                        aria-label="Cat Education through Alley Cat"> Alley Cat
+                        Allies</a>
+
+                </div>
+                <div id="footer-2">
+                    <h2>Learn More About Camping</h2>
+
+                </div>
+                <div id="footer-5">
+                    <a href="https://parks.canada.ca/serapprocher-connect/ltc-dlc"
+                        aria-label="Parks Canada guide to camping"> Parks Canada</a>
+
+                </div>
+                <div id="footer-6">
+                    <a href="https://www.mountainwarehouse.com/community/expert-advice/camping-guide-for-beginners"
+                        aria-label="Monutain Equipment Warehouse guide to camping">
+                        MEC</a>
+
+                </div>
+
+            </section>
+        </footer>
+    </div>
+
+</body>
+
+</html>
